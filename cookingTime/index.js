@@ -21,10 +21,10 @@ function cookingTime(neededPower, minutes, seconds, power) {
     );
     
     let powerPercentage = neededPowerInt / powerInt;
-    // console.log(powerPercentage);
+    
     
     let requiredTime = ((minutes * 60) + seconds) * powerPercentage;
-    // let requiredTime = (`{minutes.seconds}`) * powerPercentage;
+   
     let mins = Math.trunc(requiredTime/60);
     let secs = Math.ceil(requiredTime%60);
     let finalMins;
@@ -36,24 +36,9 @@ if(secs >= 60){
     finalMins = mins;
     finalSecs = secs;
 }
-
-
-
     let result = finalMins + " minutes " + finalSecs + " seconds";
-    // console.log(result);
+    
     return result
-//     // минуты перевести в секи
-// let neededSecs = (minutes * 60) + seconds;
-// console.log(neededSecs);
-// // рассчитать сколько нужно на имеющуюся мощность
-// let secs =  neededPowerInt * neededSecs / powerInt;
-// console.log(Math.round(secs));
-//     // вернуть секи в минуты
-//     let neededMinutes = secs / 60;
-//     console.log(neededMinutes);
-  } 
+}
 
-//   cookingTime(600, 4, 20, "800W");
-//   cookingTime("800W", 3, 0, "1200W");
-//   cookingTime("100W", 8, 45, "50W");
-  cookingTime("21W", 64, 88, "25W");
+  cookingTime("21W", 64, 88, "25W")
